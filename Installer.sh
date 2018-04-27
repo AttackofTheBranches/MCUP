@@ -1,6 +1,17 @@
 cd /MCUP/
 echo "Welcome to The Hackintosh Updater"
-echo “”
+
+echo "1. Probook/Elitebook/Zbook"
+
+read -p "Please select your Computer Family: (# then RETURN) " FAM
+
+sed "${FAM}q;d" FAMILIES_LIST > COMP_FAMILY
+
+COMP_FAMILY=`cat COMP_FAMILY`
+echo "Showing Builds for $COMP_FAMILY"
+
+if [ $COMP_FAMILY = "Probook_Elitebook_Zbook" ]; then
+echo ""
 echo "01. 2x60"
 echo "02. 2x70"
 echo "03. 2x70_hires" 
@@ -51,14 +62,14 @@ echo "47. ZBook_G2_haswell_alc280"
 echo "48. ZBook_G1_haswell"
 echo "49. ZBook_G2_broadwell"
 echo "50. ZBook_G3_skylake"
+fi
 
-read -p "Please select your build: (# then RETURN)" MODEL
+read -p "Please select your build: (# then RETURN) " MODEL
 
-sed "${MODEL}q;d" supported > COMP_TYPE
+sed "${MODEL}q;d" BUILD_LISTS/Probook_Elitebook_Zbook > COMP_MODEL
 
-COMP_TYPE=`cat COMP_TYPE`
-echo "Installing for $COMP_TYPE"
-
-echo "Installing..."
+COMP_MODEL=`cat COMP_MODEL`
+echo "Installing for $COMP_MODEL"
+clear
 /MCUP/MacUpdater.sh
 

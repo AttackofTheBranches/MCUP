@@ -1,4 +1,12 @@
 cd /MCUP/
+COMP_FAMILY=`cat COMP_FAMILY`
+COMP_MODEL=`cat COMP_MODEL`
+echo "Running MCUP Update"
+echo "Selected Family is $COMP_FAMILY"
+echo "Selected Build is $COMP_MODEL"
+echo "Installing..."
+
+if [ $COMP_FAMILY = "Probook_Elitebook_Zbook" ]; then
 if [ ! -d "Projects" ]; then
   mkdir Projects
 fi
@@ -21,9 +29,8 @@ cp ~/Library/ssdtPRGen/ssdt.aml /Volumes/EFI/EFI/Clover/ACPI/patched/SSDT.aml
 #WHERE SHIT GET’S COMPLEX
 
 #!/bin/sh
-COMP_TYPE=`cat /MCUP/COMP_TYPE`
-echo “Installing for $COMP_TYPE"
-./install_acpi.sh $COMP_TYPE
+echo "Installing for $COMP_MODEL"
+./install_acpi.sh $COMP_MODEL
 
 
 
@@ -40,3 +47,4 @@ zip $num.zip config.plist
 rm config.plist
 cd /MCUP/Projects/probook.git/
 cp ./config/config_6x70p.plist /Volumes/EFI/EFI/Clover/config.plist
+fi
