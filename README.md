@@ -10,6 +10,9 @@ We'll be gone in a week. I can already here the lawsuits.
 Run this
 
 git clone https://github.com/AttackofTheBranches/HackintoshUpdaters.git /MCUP
+
 cd /MCUP
+
 sudo chmod +x *
+
 sudo ./Installer.sh
