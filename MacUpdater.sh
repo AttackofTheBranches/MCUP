@@ -36,10 +36,6 @@ echo "Installing for $COMP_MODEL"
 
 
 ./build.sh
-zip
-value=`cat zipnum.txt`
-num=$(($value + 1))
-echo $num > zipnum.txt
 cd /Volumes/EFI/
 rm -rf EFI.bak
 cp -R EFI EFI.bak
