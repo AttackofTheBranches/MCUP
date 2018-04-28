@@ -1,6 +1,7 @@
 cd /MCUP/
 COMP_FAMILY=`cat COMP_FAMILY`
 COMP_MODEL=`cat COMP_MODEL`
+COMP_CONFIG=`cat COMP_CONFIG`
 echo "Running MCUP Update"
 echo "Selected Family is $COMP_FAMILY"
 echo "Selected Build is $COMP_MODEL"
@@ -46,5 +47,5 @@ cd /Volumes/EFI/EFI/Clover/
 zip $num.zip config.plist
 rm config.plist
 cd /MCUP/Projects/probook.git/
-cp ./config/config_6x70p.plist /Volumes/EFI/EFI/Clover/config.plist
+cp ./config/$CONFIG.plist /Volumes/EFI/EFI/Clover/config.plist
 fi
