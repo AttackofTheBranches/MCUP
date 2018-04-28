@@ -36,6 +36,7 @@ echo "Installing for $COMP_MODEL"
 
 
 ./build.sh
+
 cd /Volumes/EFI/
 rm -rf EFI.bak
 cp -R EFI EFI.bak
