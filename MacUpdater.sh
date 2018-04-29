@@ -1,7 +1,8 @@
 #Set working directory to script location
 INSTALLDIR=$(dirname "$0")
+echo "Updating Clover"
 cd $INSTALLDIR
-#Downlaod CLOVER
+Downlaod CLOVER
 cd CLOVER
 wget -O Clover.zip https://sourceforge.net/projects/cloverefiboot/files/latest/download CLOVER/
 unzip Clover.zip
@@ -30,4 +31,10 @@ fi
 if [ $COMP_FAMILY = "Lenovo" ]; then
   #RUn lenovo grabber
 BUILD_LISTS/Lenovo/Lenovo_Install_Picker.sh
+fi
+
+if [ $COMP_FAMILY = "CUSTOM" ]; then
+  #RUn lenovo grabber
+BUILD_LISTS/CUSTOM/BASE_INSTALL.sh
+BUILD_LISTS/CUSTOM/CUSTOM_INSTALL.sh
 fi
