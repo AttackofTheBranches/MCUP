@@ -1,6 +1,7 @@
 cd /MCUP/
-COMP_FAMILY=`cat COMP_FAMILY`
-COMP_MODEL=`cat COMP_MODEL`
+COMP_FAMILY=`cat /MCUP/CURRENT_CONFIG/COMP_FAMILY
+COMP_MODEL=`cat /MCUP/CURRENT_CONFIG/COMP_MODEL`
+COMP_CONFIG=`cat /MCUP/CURRENT_CONFIG/COMP_CONFIG`
 echo "Running MCUP Update"
 echo "Selected Family is $COMP_FAMILY"
 echo "Selected Build is $COMP_MODEL"
@@ -35,17 +36,12 @@ echo "Installing for $COMP_MODEL"
 
 
 ./build.sh
-zip
-value=`cat zipnum.txt`
-num=$(($value + 1))
-echo $num > zipnum.txt
 cd /Volumes/EFI/
 rm -rf EFI.bak
 cp -R EFI EFI.bak
 cd /Volumes/EFI/EFI/Clover/
-zip $num.zip config.plist
 rm config.plist
 cd /MCUP/Projects/probook.git/
 
-cp ./config/$config.plist /Volumes/EFI/EFI/Clover/config.plist
+cp ./config/$COMP_CONFIG /Volumes/EFI/EFI/Clover/config.plist
 fi
