@@ -35,6 +35,8 @@ COMP_MODEL=`cat CURRENT_CONFIG/COMP_MODEL`
 fi
 
 
+
+
 echo "Installing for $COMP_MODEL"
 clear
 /MCUP/MacUpdater.sh
