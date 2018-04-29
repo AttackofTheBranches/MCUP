@@ -16,7 +16,7 @@ cd Projects
 if [ ! -d "probook.git" ]; then
   git clone https://github.com/RehabMan/HP-ProBook-4x30s-DSDT-Patch probook.git
 fi
-cd /MCUP/BUILD_LISTS/Probook_Elitebook_Zbook/Projects/probook.git/
+cd $INSTALLDIR/BUILD_LISTS/Probook_Elitebook_Zbook/Projects/probook.git/
 git pull
 ./download.sh
 ./install_downloads.sh
@@ -42,7 +42,7 @@ rm -rf EFI.bak
 cp -R EFI EFI.bak
 cd /Volumes/EFI/EFI/Clover/
 rm config.plist
-cd /MCUP/BUILD_LISTS/Probook_Elitebook_Zbook/Projects/probook.git/
+cd $INSTALLDIR/BUILD_LISTS/Probook_Elitebook_Zbook/Projects/probook.git/
 
 cp ./config/$COMP_CONFIG /Volumes/EFI/EFI/Clover/config.plist
 fi
