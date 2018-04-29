@@ -9,3 +9,7 @@ echo "Installing..."
 if [ $COMP_FAMILY = "Probook_Elitebook_Zbook" ]; then
 BUILD_LISTS/Probook_Elitebook_Zbook/RehabInstaller.sh
 fi
+
+if [ $COMP_FAMILY = "Lenovo" ]; then
+BUILD_LISTS/Lenovo/Lenovo_Install_Picker.sh
+fi

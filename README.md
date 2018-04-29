@@ -17,6 +17,6 @@ git clone https://github.com/AttackofTheBranches/MCUP.git /MCUP
 
 cd /MCUP
 
-chmod +x *
+chmod -R +x *
 
 sudo ./Installer.sh
