@@ -5,7 +5,9 @@ cd $INSTALLDIR
 cd CLOVER
 wget -O Clover.zip https://sourceforge.net/projects/cloverefiboot/files/latest/download CLOVER/
 unzip Clover.zip
+#Install Clover-EFI
 sudo installer -pkg Clover*.pkg -target /
+#Delete installer
 rm *.pkg
 rm *.md5
 rm *.zip
