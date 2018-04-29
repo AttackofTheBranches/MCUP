@@ -1,6 +1,15 @@
 #Set working directory to script location
 INSTALLDIR=$(dirname "$0")
 cd $INSTALLDIR
+#Downlaod CLOVER
+cd CLOVER
+wget -O Clover.zip https://sourceforge.net/projects/cloverefiboot/files/latest/download CLOVER/
+unzip Clover.zip
+sudo installer -pkg Clover*.pkg -target /
+rm *.pkg
+rm *.md5
+rm *.zip
+cd ..
 #Get config files
 COMP_FAMILY=`cat CURRENT_CONFIG/COMP_FAMILY`
 COMP_MODEL=`cat CURRENT_CONFIG/COMP_MODEL`
