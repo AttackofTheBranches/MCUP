@@ -16,10 +16,13 @@ I don’t know. I wrote the early alpha for this a year ago, and then for the lo
 
 ## How to
 
-[git clone https://github.com/AttackofTheBranches/MCUP.git
+```
+git clone https://github.com/AttackofTheBranches/MCUP.git
 
 cd MCUP.git
 
 chmod -R +x *
 
-sudo ./Installer.sh]
+sudo ./Installer.sh
+
+```
