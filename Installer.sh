@@ -1,4 +1,5 @@
-cd /MCUP/
+INSTALLDIR=$(dirname "$0")
+cd $INSTALLDIR
 echo "Welcome to The Hackintosh Updater"
 
 cat FAMILIES
@@ -39,5 +40,4 @@ fi
 
 echo "Installing for $COMP_MODEL"
 clear
-/MCUP/MacUpdater.sh
-
+$INSTALLDIR/MacUpdater.sh

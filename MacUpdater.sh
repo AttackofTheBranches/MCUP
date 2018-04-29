@@ -1,4 +1,5 @@
-cd /MCUP/
+INSTALLDIR=$(dirname "$0")
+cd $INSTALLDIR
 COMP_FAMILY=`cat CURRENT_CONFIG/COMP_FAMILY`
 COMP_MODEL=`cat CURRENT_CONFIG/COMP_MODEL`
 echo "Running MCUP Update"
@@ -7,6 +8,7 @@ echo "Selected Build is $COMP_MODEL"
 echo "Installing..."
 
 if [ $COMP_FAMILY = "Probook_Elitebook_Zbook" ]; then
+BUILD_LISTS/Probook_Elitebook_Zbook/ACPI_TO_CONFIG.sh
 BUILD_LISTS/Probook_Elitebook_Zbook/RehabInstaller.sh
 fi
 
