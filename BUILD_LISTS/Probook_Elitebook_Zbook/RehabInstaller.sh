@@ -1,6 +1,6 @@
 cd /MCUP/
-COMP_FAMILY=`cat CURRENT_CONFIG/COMP_FAMILY
-COMP_MODEL=`cat CURRENT_CONFIG/COMP_MODEL`
+COMP_FAMILY=`cat COMP_FAMILY`
+COMP_MODEL=`cat COMP_MODEL`
 echo "Running MCUP Update"
 echo "Selected Family is $COMP_FAMILY"
 echo "Selected Build is $COMP_MODEL"
