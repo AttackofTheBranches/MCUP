@@ -1,3 +1,4 @@
+diskutil mount /dev/disk0s1
 INSTALLDIR=$PWD
 cd $INSTALLDIR
 echo "Custom Hackintosh Creation Kit"
@@ -8,10 +9,12 @@ cat PARTS/MB_LIST
 read -p "Please select your Motherboard Family: (# then RETURN) " MB_TYPE
 
 #Save computer MB TYPE file to config file
-sed "${MB_TYPE}q;d" PARTS/MB_LIST > CUSTOM_CONFIG/MB_TYPE
+sed "${MB_TYPE}q;d" PARTS/MB_FAM > CUSTOM_CONFIG/MB_TYPE
 #Load user's family
 
-GPU_TYPE=`cat CUSTOM_CONFIG/GPU_TYPE`
+MB_TYPE=`cat CUSTOM_CONFIG/MB_TYPE`
+./MB_SELECT.sh
+
 
 #GET GPU FAMILY
 cat PARTS/GPU_LIST
