@@ -8,7 +8,7 @@ cat PARTS/MB_LIST
 read -p "Please select your Motherboard Family: (# then RETURN) " MB_TYPE
 
 #Save computer MB TYPE file to config file
-sed "${FAM}q;d" PARTS/MB_LIST > CUSTOM_CONFIG/MB_TYPE
+sed "${MB_TYPE}q;d" PARTS/MB_LIST > CUSTOM_CONFIG/MB_TYPE
 #Load user's family
 
 GPU_TYPE=`cat CUSTOM_CONFIG/GPU_TYPE`
@@ -19,7 +19,7 @@ cat PARTS/GPU_LIST
 read -p "Please select your GPU Family: (# then RETURN) " GPU_TYPE
 
 #Save computer file to config file
-sed "${FAM}q;d" PARTS/GPU > CUSTOM_CONFIG/GPU_TYPE
+sed "${GPU_TYPE}q;d" PARTS/GPU > CUSTOM_CONFIG/GPU_TYPE
 #Load user's family
 
 GPU_TYPE=`cat CUSTOM_CONFIG/GPU_TYPE`
