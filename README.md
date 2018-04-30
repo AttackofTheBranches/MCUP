@@ -1,6 +1,6 @@
 # MCUP: A Hackintosh Updaters
 
-So BASIC it sill uses floppies
+Started a pull script and now I'm here!
 
 A collection of updaters for use with hackintosh laptops.
 We'll be gone in a week. I can already hear the lawsuits.
