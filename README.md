@@ -11,7 +11,9 @@ I don’t know. I wrote the early alpha for this a year ago, and then for the lo
 ## Requirements
 
 1. A Hackintosh
-2. git
+2. git (Not for long though)
+3. Complete trust in what I’m about to do
+
 
 ## How to Install
 
