@@ -1,5 +1,7 @@
 # Getting working dir for script
 INSTALLDIR=$(dirname "$0")
+# Cough nevermind all this
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 #Change to script's directory
 cd $INSTALLDIR
 #Display welcome screen
